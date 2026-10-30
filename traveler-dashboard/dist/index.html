@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Неоновая панель путешественника: задачи, погода, курс валют и расходы" />
+  <title>TRAVEL CONTROL · NIGHT MODE EDITION</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="site-header">
+      <a class="travel-brand" href="#top" aria-label="Travel Control">
+        <span class="brand-mark">◢</span><span><b>TRAVEL</b><small>CONTROL</small></span>
+      </a>
+      <nav class="main-nav" aria-label="Основная навигация">
+        <a class="active" href="#top">ОБЗОР</a>
+        <a href="#widgets">ВИДЖЕТЫ</a>
+        <a href="#expenses">РАСХОДЫ</a>
+        <a href="#route">МАРШРУТ</a>
+        <a href="#about">О ПАНЕЛИ</a>
+      </nav>
+      <div class="nav-actions"><button type="button" aria-label="Поиск">⌕</button><button type="button" aria-label="Профиль">◉</button></div>
+    </header>
+    <main id="top" class="main-content">
+      <section class="hero-section">
+        <p class="hero-kicker">TRAVEL CONTROL / SYSTEM 02</p>
+        <h1>TRAVEL<br /><span>CONTROL</span></h1>
+        <div class="hero-line"></div>
+        <p class="hero-subtitle">INFINITE JOURNEY POSSIBILITIES</p>
+        <p class="hero-description">Единая панель для маршрута, задач, погоды, валют и бюджета поездки.</p>
+        <a class="scroll-cue" href="#widgets"><span></span>ПЕРЕМОТАЙТЕ ВНИЗ</a>
+      </section>
+      <section id="widgets" class="control-section">
+        <div class="section-heading"><div><p class="eyebrow">TRAVEL CONTROL DESK</p><h2 id="date-heading">Добрый день</h2></div><div class="topbar-meta"><span class="live-pill"><span class="live-dot"></span>SYSTEM ONLINE</span><span class="time" id="clock">--:--</span></div></div>
+        <div class="widget-toolbar"><p class="section-label">ДОБАВИТЬ КОМПОНЕНТ</p><div class="add-buttons">
+          <button class="add-button" data-add-widget="todo"><span class="button-icon">✓</span><span><strong>Задачи</strong><small>личный список</small></span><span class="plus">+</span></button>
+          <button class="add-button" data-add-widget="weather"><span class="button-icon">☼</span><span><strong>Погода</strong><small>Москва · Open-Meteo</small></span><span class="plus">+</span></button>
+          <button class="add-button" data-add-widget="currency"><span class="button-icon">↗</span><span><strong>Курс валют</strong><small>EUR → USD · Frankfurter</small></span><span class="plus">+</span></button>
+          <button class="add-button" data-add-widget="expense"><span class="button-icon">₽</span><span><strong>Расходы</strong><small>бюджет поездки</small></span><span class="plus">+</span></button>
+        </div></div>
+        <div id="notice" class="notice" role="status" aria-live="polite"></div>
+        <section id="dashboard-grid" class="dashboard-grid" aria-live="polite"></section>
+        <section id="empty-state" class="empty-state" hidden><div class="empty-icon">◈</div><h3>CONTROL CENTER READY</h3><p>Добавьте карточки выше — соберите собственную панель путешествия.</p></section>
+      </section>
+      <section id="route" class="feature-band"><div><p class="eyebrow">SMART ROUTE PROFILE</p><h2>ДЛЯ РАЗНЫХ<br />СЦЕНАРИЕВ ПОЕЗДКИ</h2></div><p>Сохраните нужные инструменты в одной панели и управляйте ими как профилем: задачи, погода, курс и бюджет доступны без лишних переходов.</p></section>
+      <section id="about" class="footer-band"><span>TRAVEL CONTROL / NIGHT MODE EDITION</span><span>© 2026 · LOCAL DASHBOARD</span></section>
+    </main>
+  </div>
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
